@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head starts here -->
+    <head>
+        <title>Beer Belly Bikers</title>
+        <meta charset="utf-8">
+        
+        <!-- Some metadata about the Beer Belly Biker website -->
+        <meta name="description" content="This website is for our motorcycle group in East Africa.">
+        <meta name="author" content="The Twin!">
+        <meta name="keywords" content="'Biker' 'Ride' Motorcycle'">
+        
+        <!-- visible area of a web page -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- link to bootstrap stylesheet -->
+        <!-- https://getbootstrap.com/docs/4.4/getting-started/download/ -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- link to 3rd party stylesheet -->
+        <!-- https://github.com/daneden/animate.css [6] -->
+        <link rel="stylesheet" href="css/animate.min.css">
+        
+        <!-- link to Beer Belly Biker stylesheet-->
+        <link href="css/bbb.css" rel="stylesheet">
+        
+
+        <!-- link to 3rd party JaveScript files -->
+        <!-- https://getbootstrap.com/docs/4.4/getting-started/download/ [1] -->
+        <!-- https://jquery.com/download/ [2] -->
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        
+        
+        <!-- Link to google fonts -->
+        <!-- https://fonts.google.com/ [3] -->
+        <!-- These fonts are used throughout the website -->
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    </head>
+    
+
+    <!-- Body starts here -->
+    <body>
+        <!-- Navigation -->
+        <!-- Uses Bootstrap for Responsive menu -->
+        <div class="container">
+            <!-- Also included some BBB styles (.navbar-bbb) -->
+            <nav class="navbar navbar-expand-lg navbar-dark border border-white navbar-bbb" >
+                <!-- Add logo with link to home page -->
+                <a href="index.html"><img src="img/bbb_logo.png" class="bbb-logo" alt="BBB Logo"></a>
+                
+                <!-- Button for mobile menu (from bootstrap) -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="whoweare.html">Who we are</a>
+                        </li> 
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Photo Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pastrides.html">Past Rides</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="join.html">Join the Club</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- End of the Navigation section -->
+        
+        
+        <!-- Wrap the rest of the page in a container -->
+        <div class="container">
+            <!-- Breadcrumbs -->
+            <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>Past Rides</li>
+            </ul>
+            
+            <br>
+        
+            <!-- Display text so user knows
+            to click on the images -->
+            <div class="row text-center">
+                <div class="col">
+                    <p class="bbb-font">Click an image to see some of our past rides...</p>
+                </div>
+            </div>
+            
+            <br><br>               
+
+            <!-- This section shows the images of past rides
+            and allws user to click one to view.
+            This section uses JavaScript to change the DOM
+            when the user clicks an image -->
+            <div class="row text-center">
+                <!-- West Nile Ride -->
+                <div class="col">
+                    <img onclick="showMap('westnile')" id="westnile" class="newGallery" src="img/lakealbert/lakealbert2.jpg" alt="West Nile Ride"/>	
+                    <div class="text-block">
+                        <h6>West Nile</h6>
+                    </div>
+                </div>
+
+                <!-- Kidepo Ride -->
+                <div class="col">
+                    <img onclick="showMap('kidepo')" id="kidepo" class="newGallery" src="img/kidepo/kidepo5.jpg" alt="Kidepo Ride"/> 	
+                    <div class="text-block">
+                        <h6>Kidepo</h6>
+                    </div>
+                </div>
+                
+                <!-- Bundibugyo Ride -->
+                <div class="col">
+                    <img onclick="showMap('bundibugyo')" id="bundibugyo" class="newGallery" src="img/lakealbert/lakealbert4.jpg" alt="Bundibugyo Ride"/> 	
+                    <div class="text-block">
+                        <h6>Bundibugyo</h6>
+                    </div>
+                </div>
+                
+                <!-- Western Kenya Ride -->
+                <div class="col">
+                    <img onclick="showMap('westkenya')" id="kenya" class="newGallery" src="img/westkenya/westkenya4.jpg" alt="Western Kenya Ride"/>	
+                    <div class="text-block">
+                        <h6>Western Kenya</h6>
+                    </div> 
+                </div>
+            </div>
+                
+            <br>
+
+            <!-- This section displays information
+            about each ride.  It is changed with 
+            JavaScript depending on user input-->
+            <div class="col text-center">
+                <p id="pastrides-title" class="bbb-font">West Nile</p>
+                <p id="pastrides-desc">This 1200km trip took us through the northern part of Murchison Falls National Park, the largest national park in Uganda.  From there, we went on to northwest Uganda where we crossed the River Nile. Riding around this region, we almost touched the borders of both the Democratic Republic of Congo and South Sudan.  On the way back down we had to load the bikes on a ferry for a river crossing.</p>
+            </div>
+                
+            <!-- This section embeds a 
+            Google map with a route of 
+            the particular trip [4] -->
+            <div class="row">
+                <div class="col text-center">
+                    <div class="pastrides-map">
+                        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m64!1m12!1m3!1d2041538.1379055677!2d30.616939965102443!3d2.0035583019229826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m49!3e0!4m5!1s0x177dbc0f9d74b39b%3A0x4538903dd96b6fec!2sKampala!3m2!1d0.34759639999999997!2d32.5825197!4m5!1s0x176fdba7083d049f%3A0xb40b95bcc7eb81e9!2sPakwach!3m2!1d2.4607140999999997!2d31.4941738!4m5!1s0x176e6265a178c769%3A0xaa1e18867d91929c!2sArua!3m2!1d3.0303299!2d30.907304!4m5!1s0x176dcb87c9e7098f%3A0xf407fcb7dfbac96c!2sKoboko!3m2!1d3.4167992!2d30.958949599999997!4m5!1s0x1772795dd49e7db5%3A0xfa829ee90de4c94!2sMoyo!3m2!1d3.6527376!2d31.7280955!4m5!1s0x17720e1410740db7%3A0x43bc308aa932cd2f!2sAdjumani!3m2!1d3.3783808!2d31.782227799999998!4m5!1s0x1771a65c0fc42a27%3A0xce6ef3d1c3d80e06!2sGulu!3m2!1d2.7724037999999998!2d32.2880726!4m5!1s0x177dbc0f9d74b39b%3A0x4538903dd96b6fec!2sKampala!3m2!1d0.34759639999999997!2d32.5825197!5e0!3m2!1sen!2sug!4v1584504280316!5m2!1sen!2sug" allowfullscreen="" aria-hidden="false" tabindex="0">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <br>
+            
+            <!-- Footer - uses Bootstrap -->
+            <footer class="page-footer border border-white font-small pt-4">
+                <div class="container-fluid text-center text-md-left">
+                    <!-- Row for address and motorcycle logos -->
+                    <div class="row">
+                        <!-- Column for BBB Address -->
+                        <div class="col">
+                            <h4 class="bbb-font">Beer Belly Bikers</h4>
+                            <address>
+                                Email us: <a href="mailto:bbbeastafrica@gmail.com">bbbeastafrica@gmail.com</a><br>
+                                Address: 1 Motorcycle Way, Kampala, Uganda<br>
+                                Phone: +256782964634
+                            </address>
+                        </div>
+
+                        <!-- Column for motorcycle logos/links -->
+                        <div class="col">
+                            <a href="https://www.honda.com/" target="_blank"><img src="img/honda.png" alt="Honda" width= "100" height= "100"></a>
+                            <a href="https://www.yamaha.com/" target="_blank"><img src="img/yamaha.png" alt="Yamaha" width= "100" height= "100"></a>
+                            <a href="http://www.suzukicycles.com/" target="_blank"><img src="img/suzuki.png" alt="Suzuki" width= "100" height= "100"></a>
+                            <a href="index.html" target="_blank"><img src="img/kawasaki.png" alt="Kawasaki" width= "100" height= "100"></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Row for navigation -->
+                    <div class="row justify-content-center">
+                        <!-- Add some custom style to the links -->
+                        <ul class="bbb-footer-links">
+                            <li>
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="whoweare.html">Who we are</a>
+                            </li> 
+                            <li>
+                                <a class="nav-link" href="gallery.html">Photo Gallery</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="pastrides.html">Past Rides</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="join.html">Join the Club</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+        <!-- add script for custom BBB JavaScript -->
+        <!-- Used for Slide Show on this page -->
+        <script src="js/bbb.js"></script>
+    </body>
+</html>

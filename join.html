@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head starts here -->
+    <head>
+        <title>Beer Belly Bikers</title>
+        <meta charset="utf-8">
+        
+        <!-- Some metadata about the Beer Belly Biker website -->
+        <meta name="description" content="This website is for our motorcycle group in East Africa.">
+        <meta name="author" content="The Twin!">
+        <meta name="keywords" content="'Biker' 'Ride' Motorcycle'">
+        
+        <!-- visible area of a web page -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- link to bootstrap stylesheet -->
+        <!-- https://getbootstrap.com/docs/4.4/getting-started/download/ -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- link to 3rd party stylesheet -->
+        <!-- https://github.com/daneden/animate.css [6] -->
+        <link rel="stylesheet" href="css/animate.min.css">
+        
+        <!-- link to Beer Belly Biker stylesheet-->
+        <link href="css/bbb.css" rel="stylesheet">
+        
+
+        <!-- link to 3rd party JaveScript files -->
+        <!-- https://getbootstrap.com/docs/4.4/getting-started/download/ [1] -->
+        <!-- https://jquery.com/download/ [2] -->
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        
+        
+        <!-- Link to google fonts -->
+        <!-- https://fonts.google.com/ [3] -->
+        <!-- These fonts are used throughout the website -->
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    </head>
+    
+
+    <!-- Body starts here -->
+    <body>
+        <!-- Navigation -->
+        <!-- Uses Bootstrap for Responsive menu -->
+        <div class="container">
+            <!-- Also included some BBB styles (.navbar-bbb) -->
+            <nav class="navbar navbar-expand-lg navbar-dark border border-white navbar-bbb" >
+                <!-- Add logo with link to home page -->
+                <a href="index.html"><img src="img/bbb_logo.png" class="bbb-logo" alt="BBB Logo"></a>
+                
+                <!-- Button for mobile menu (from bootstrap) -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="whoweare.html">Who we are</a>
+                        </li> 
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Photo Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pastrides.html">Past Rides</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="join.html">Join the Club</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- End of the Navigation section -->
+
+        
+        <!-- Wrap the rest of the page in a container -->
+        <div class="container">
+            <!-- Breadcrumbs -->
+            <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>Join the Club</li>
+            </ul>
+            
+            
+            <!-- This section will wrap the entire form -->
+            <div class="join">
+                <h2>Join the Club!</h2>
+                <!-- The actual form starts here -->
+                <form class="form-horizontal join">
+                    <!-- Input for First Name -->
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="firstname">First Name:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="firstname" placeholder="First Name" name="firstname" required>
+                        </div>
+                    </div>
+      
+                    <!-- Input for Last Name -->
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="lastname">Last Name:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="lastname" placeholder="Last Name" name="lastname" required>
+                        </div>
+                    </div>
+
+                    <!-- Input for Email -->
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="email">Email:</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="email" placeholder="Email address" name="email" required>
+                        </div>
+                    </div>
+      
+                    <!-- Input for Phone Numbner -->
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="phonenum">Phone Number:</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="phonenum" placeholder="Phone Number" name="phonenum" required>
+                        </div>
+                    </div>
+      
+                    <!-- Input for Info about bike(s) -->
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Tell us about your bike(s):</label>
+                        <div class="col-sm-10">
+                            <textarea name="reason" cols="50" rows="5" required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Submit button -->
+                    <div class="form-group">        
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <input type="submit" class="btn btn-info btn-lg" value="Join The Club!">
+                        </div>
+                    </div>
+                </form>
+            </div>
+    
+    
+            <!-- Footer - uses Bootstrap -->
+            <footer class="page-footer border border-white font-small pt-4">
+                <div class="container-fluid text-center text-md-left">
+                    <!-- Row for address and motorcycle logos -->
+                    <div class="row">
+                        <!-- Column for BBB Address -->
+                        <div class="col">
+                            <h4 class="bbb-font">Beer Belly Bikers</h4>
+                            <address>
+                                Email us: <a href="mailto:bbbeastafrica@gmail.com">bbbeastafrica@gmail.com</a><br>
+                                Address: 1 Motorcycle Way, Kampala, Uganda<br>
+                                Phone: +256782964634
+                            </address>
+                        </div>
+
+                        <!-- Column for motorcycle logos/links -->
+                        <div class="col">
+                            <a href="https://www.honda.com/" target="_blank"><img src="img/honda.png" alt="Honda" width= "100" height= "100"></a>
+                            <a href="https://www.yamaha.com/" target="_blank"><img src="img/yamaha.png" alt="Yamaha" width= "100" height= "100"></a>
+                            <a href="http://www.suzukicycles.com/" target="_blank"><img src="img/suzuki.png" alt="Suzuki" width= "100" height= "100"></a>
+                            <a href="index.html" target="_blank"><img src="img/kawasaki.png" alt="Kawasaki" width= "100" height= "100"></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Row for navigation -->
+                    <div class="row justify-content-center">
+                        <!-- Add some custom style to the links -->
+                        <ul class="bbb-footer-links">
+                            <li>
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="whoweare.html">Who we are</a>
+                            </li> 
+                            <li>
+                                <a class="nav-link" href="gallery.html">Photo Gallery</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="pastrides.html">Past Rides</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="join.html">Join the Club</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

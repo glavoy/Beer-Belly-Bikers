@@ -1,0 +1,829 @@
+/*************************************************************
+This section is global for the entire website
+*************************************************************/
+
+/* This includes the padding and the border
+in the width and height for every element */
+* {
+    box-sizing: border-box;
+}
+
+
+/* Using variables for colours. This makes it easier
+to change any element of the theme if need be */
+:root {
+    --bgtop: #000000;       /* background gradient - top colour */
+    --bgbottom: #001151;    /* background gradient - bottom colour */
+    --bbbfont: #a0a0a0;     /* The main colour for the font */
+}
+
+
+.bbb-logo{
+    width: 200px;
+    height: 120px;
+}
+
+
+/* Styles used for the body */
+body {
+    padding: 20px;
+    background: linear-gradient(var(--bgtop), var(--bgbottom));
+    color: var(--bbbfont);
+}
+
+/* Center align headings */
+h1 {
+    text-align: center;
+    font-size: 4vw;
+}
+h2, h3 {
+    text-align: center;
+}
+
+/*Default size for paragraph font */
+p {
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+
+/* This is a Google Font used throughout
+several places in the website.
+*/
+.bbb-font {
+    font-family: 'Permanent Marker', cursive;
+}
+
+/* Footer */
+.page-footer {
+    border-radius: 20px;
+}
+ul.bbb-footer-links {
+    list-style-type: none;
+    
+}
+ul.bbb-footer-links li {
+    font-size: 14px;
+    float: left; 
+    text-decoration: underline;
+}
+ul.bbb-footer-links li a {
+    color: #006AFF;
+}
+ul.bbb-footer-links li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+
+/*************************************************************
+Navigation Bar
+*************************************************************/
+
+/* Make the background of the Navigation bar
+the same colour as the top gradient colour */
+.navbar-bbb {
+    background-color: var(--bgtop);
+}
+
+/* Use theme colour for links */
+.navbar-bbb .navbar-nav .nav-link {
+    color: var(--bbbfont);
+}
+
+/* change to white when hovering over a link */
+.nav-item:hover  {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* styles for the nav */
+nav {
+    background:black;
+    border-radius: 20px;
+    text-align:left;
+    width:100%;
+    padding:1px;
+    position: fixed;
+}
+
+/* Styles for the unordered list */
+nav ul{
+    list-style:none;
+    margin:5px;
+    padding:1px;
+    text-align:left;
+}
+
+/* Styles for the list items */
+nav li{
+    display:inline;
+    border-radius: 5px;
+    padding:1px;
+    font-size: 20px;
+}
+
+/* Styles for the links */
+nav li a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 1em;
+    color: var(--colourB);
+    display:inline-block;
+    padding:10px;
+
+}
+/*End of Nav bar*/
+
+
+/*************************************************************
+Breadcrumbs
+*************************************************************/
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #000000;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: #0275d0;
+    content: ">\00a0";
+}
+
+ul.breadcrumb li a {
+    color: #006AFF;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+/* End of breadcrumbs */
+
+
+
+
+/*************************************************************
+Styles particular to the home page only (index.html)
+*************************************************************/
+
+/* Text on home page - Uses a Google Font*/
+.welcome {
+    padding: 20px;
+    font-family: 'Comfortaa', cursive; 
+}
+
+/* Smaller text on home page */
+.welcome h3 {
+    font-size: 3vw;
+}
+
+/* Flag images on home page*/
+.flag-pic img{
+    border-radius: 5px;
+    height: auto;
+    max-width: 200px;
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+/* Styles for the Slideshow 
+This was taken from 
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto
+but modified to suit the them of this website 
+Particularly the box-shadow, border-radius and the size */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    width: auto;    
+}
+
+.slideshow-container img{
+    border-radius: 20px;
+    align-content: center;
+    width: 100%;
+    box-shadow: 0px 0px 97px 9px rgba(83,110,219,0.5);
+}
+
+.image_text {
+    color: white;
+    font-size: 3vw;
+    font-weight: 400;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/*used this becasue the white text did not show up well for one of the images*/
+#fortmurchison.image_text {
+    color: black;
+}
+
+/* Image fade-in */
+.fadein {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 4s;
+  animation-name: fade;
+  animation-duration: 4s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .3} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .3} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size on top of the images*/
+@media only screen and (max-width: 300px) {
+  .image_text {font-size: 12px}
+}
+/* End of styles for the Slideshow
+
+
+
+
+
+/*************************************************************
+Styles particular to the Who We Are page (whoweare.html)
+*************************************************************/
+/* This page uses a CSS grid for layout */
+.about-us-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.aboutus {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.aboutus p {
+    font-family: 'Neucha', cursive;
+}
+
+.biker1img { 
+    grid-area: 2 / 1 / 3 / 2; 
+    justify-self: end;
+}
+
+.biker1desc { 
+    grid-area: 2 / 2 / 3 / 3; 
+    align-self:center;
+}
+
+.biker2desc { 
+    grid-area: 3 / 1 / 4 / 2; 
+    align-self:center;
+}
+
+.biker2img {
+    grid-area: 3 / 2 / 4 / 3; 
+}
+
+.biker3img { 
+    grid-area: 4 / 1 / 5 / 2; 
+    justify-self: end;
+}
+
+.biker3desc { 
+    grid-area: 4 / 2 / 5 / 3; 
+    align-self:center;
+}
+
+.biker4desc { 
+    grid-area: 5 / 1 / 6 / 2; 
+    align-self:center;
+}
+
+.biker4img {
+    grid-area: 5 / 2 / 6 / 3; 
+}
+
+
+/* Info about each biker*/
+.bikerbrief {
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+}
+
+/* Info about the bikes owned*/
+.bikesowned {
+    font-size: 20px;
+    color: #006AFF;
+    font-size: 2vw;
+}
+
+/* Image for each biker */
+.about-us-pic{
+    border-radius: 20px;
+    height: auto;
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+/* For the images of each biker*/
+.bikerimg {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+}
+
+/* Remove padding on hover */
+.bikerimg:hover {
+    padding: 0px;
+}
+
+
+
+
+/*************************************************************
+Styles particular to the Members pages (mem_????.html)
+*************************************************************/
+/* Styles applied to the biker images */
+.member_img {
+    padding: 0px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Styles applied to the biker descriptions  */
+.member_text {
+    text-align: center;
+    font-size: 2.5vw;
+    padding: 20px;
+    font-family: 'Neucha', cursive;
+}
+
+/* Styles applied to the flags */
+.member_flag {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    border-radius: 15px;
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.member_name p{
+    text-align: center;
+    font-family: 'Bowlby One SC', cursive;
+    font-size: 4vw;
+}
+
+
+
+
+
+
+/*************************************************************
+Styles particular to the Photo Gallery page (gallery.html)
+*************************************************************/
+#videoButton{
+    background-color: #001151;
+}
+
+/* Used to keep the animation active on the 'Play cool video' button 
+This draws attention to the user.  After clicking the button,
+the animation is stopped with JavaScript */
+.keep-animate {
+    animation-iteration-count: infinite;
+}
+
+/* Styles for the thumbnails */
+.thumbnails {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* This style is also used in the pastrides.html page*/
+.newGallery{
+    max-width:200px;
+    max-height:100%;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.newGallery:hover{
+    padding: 0px
+}
+
+/* Thumbnail images */
+.thmb-img{
+    max-width:120px;
+    max-height:100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+/* Main image */
+.main-img{
+    max-width:100%;
+    margin-top: 10px;
+    box-shadow: 0px 0px 97px 9px rgba(83,110,219,0.5);
+    border-radius: 15px;
+}
+
+/* Place the navigation buttons in the middle, vertically*/
+.imgnav {
+    vertical-align: center;
+    
+}
+
+/* This style is also used in the pastrides.html page*/
+.text-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bbbfont);
+    color: white;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Navigation buttons */
+#btn-forward, #btn-backward{
+    font-size: 4vw;
+    background-color: gainsboro;
+}
+
+
+/* This was adapted from: 
+https://jsfiddle.net/esedic/aekw4ftr Author: Elvis Sedić */
+.embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%; 
+} 
+
+.embed-container iframe, .embed-container object, .embed-container embed { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+}
+
+.modaliFrame{
+    width: 100%;
+    height: 350px;
+}
+
+
+
+
+
+
+/*************************************************************
+Styles particular to the Past Rides page (pastrides.html)
+*************************************************************/
+/*This is to make the iframe map responsive*/
+.pastrides-map{
+    overflow:hidden;
+    padding-bottom:56.25%; /*ratio of 9/16*/
+    position:relative;
+    height:0;
+    border-radius: 20px;
+}
+
+.pastrides-map iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+/* Description of past rides */
+#pastrides-desc{
+    font-size: 2vw;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+
+
+
+
+
+
+/* The following styles were adapted from:
+https://tympanus.net/codrops/2011/11/02/original-hover-effects-with-css3/
+They are used when hovering over an image of each biker on the 
+individual biker's page
+*/
+
+/* This is for all bikers */
+.viewBiker {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+}
+.viewBiker .mask, .viewBiker .content {
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+.viewBiker img {
+    display: block;
+    position: relative
+}
+.viewBiker h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 27px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px 0 0 0
+}
+.viewBiker p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 20px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 20px;
+    text-align: center
+}
+.viewBiker a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000
+}
+.viewBiker a.info:hover {
+    box-shadow: 0 0 10px #000
+}
+
+
+
+/* Specifically for biker 1*/
+.viewBiker1 img { 
+	transition: all 0.4s ease-in-out 0.5s; 
+}
+.viewBiker1 .mask{ 
+	background-color: rgba(146,96,91,0.5);
+	opacity:0;
+	transition: all 0.3s ease-in 0.4s;
+}
+.viewBiker1 h2{
+	opacity:0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background: transparent;
+    margin: 20px 40px 0px 40px;
+    transform: scale(10);
+    transition: all 0.3s ease-in-out 0.1s;
+}
+.viewBiker1 p { 
+	opacity:0;
+    transform: scale(10);
+	transition: all 0.3s ease-in-out 0.2s;
+}
+.viewBiker1 a.info { 
+	opacity:0;
+    transform: translateY(100px);
+	transition: all 0.3s ease-in-out 0.1s;
+}
+.viewBiker1:hover img { 
+	transform: scale(1.1);
+    border-radius: 0;
+} 
+.viewBiker1:hover .mask {  
+	opacity:1; 
+	transition-delay: 0s;
+}																			 
+.viewBiker1:hover img { 
+	transition-delay: 0s; 
+    opacity: 0.3;
+}
+.viewBiker1:hover h2 { 
+	opacity: 1;
+    transform: scale(1);
+	transition-delay: 0.1s;
+}
+.viewBiker1:hover p { 
+	opacity:1; 
+    transform: scale(1);
+	transition-delay: 0.2s;
+}
+.viewBiker1:hover a.info { 
+	opacity:1;
+    transform: translateY(0px);
+	transition-delay: 0.3s;
+}
+
+
+
+/* Specifically for biker 2*/
+.viewBiker2 img{
+    transition: all 0.5s ease-out;
+	opacity: 1;
+}
+.viewBiker2 .mask { 
+	background-color: rgba(77,44,35,0.5);
+    transform: rotate(0deg) scale(1);
+	opacity: 0;
+	transition: all 0.3s ease-out;
+    transform: translateY(-200px) rotate(180deg);
+}
+.viewBiker2 h2{
+    transform: translateY(-200px);
+	transition: all 0.2s ease-in-out;
+}
+.viewBiker2 p { 
+    transform: translateY(-200px);
+	transition: all 0.2s ease-in-out;
+}
+.viewBiker2 a.info { 
+    transform: translateY(-200px);
+	transition:  all 0.2s ease-in-out;
+}
+.viewBiker2:hover img{
+    transform: rotate(720deg) scale(0);
+	opacity: 0.3;
+    border-radius: 0;
+}
+.viewBiker2:hover .mask { 
+	opacity: 1;  
+    transform: translateY(0px) rotate(0deg);
+    transition-delay: 0.4s;
+}																						
+.viewBiker2:hover h2 { 
+    transform: translateY(0px);
+	transition-delay: 0.7s;
+}
+.viewBiker2:hover p { 
+	transform: translateY(0px);
+	transition-delay: 0.6s;
+}
+.viewBiker2:hover a.info { 
+    transform: translateY(0px);
+	transition-delay: 0.5s;
+}
+
+
+
+/* Specifically for biker 3*/
+.viewBiker3 img { 
+    transition: all 0.2s linear;
+}
+.viewBiker3 .mask {
+    opacity: 0;
+    background-color: rgba(219,127,8, 0.7); 
+    transition: all 0.2s ease-in-out;
+}
+.viewBiker3 h2 {
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+.viewBiker3 p { 
+    transform: translateY(100px);
+    opacity: 0;
+	transition: all 0.2s linear;
+}
+.viewBiker3 a.info{
+    opacity: 0;
+	transition: all 0.2s ease-in-out;
+}
+.viewBiker3:hover img { 
+	transform: scale(1.1);
+    border-radius: 0;
+    opacity: 0.3;
+} 
+.viewBiker3:hover .mask { 
+	opacity: 1;
+}
+.viewBiker3:hover h2,
+.viewBiker3:hover p,
+.viewBiker3:hover a.info {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.viewBiker3:hover p {
+    transition-delay: 0.1s;
+}
+.viewBiker3:hover a.info {
+    transition-delay: 0.2s;
+}
+
+
+
+
+/* Specifically for biker 4*/
+.viewBiker4 img { 	
+    transition: all 0.2s ease-in; 
+}
+.viewBiker4 .mask { 
+	background-color: rgba(0,0,0,0.6);
+	opacity: 0;
+	transform: translate(460px, -100px) rotate(180deg);
+	transition: all 0.2s 0.4s ease-in-out;
+}
+.viewBiker4 h2{
+	transform: translateY(-100px);
+	transition: all 0.2s ease-in-out;
+}
+.viewBiker4 p { 
+	transform: translateX(300px) rotate(90deg);
+	transition: all 0.2s ease-in-out;
+}
+.viewBiker4 a.info { 
+	transform: translateY(-200px);
+	transition: all 0.2s ease-in-out;
+} 
+
+.viewBiker4:hover .mask { 
+	opacity:1; 
+	transition-delay: 0s;							 
+	transform: translate(0px, 0px);
+}
+
+.viewBiker4:hover img { 
+    border-radius: 0;
+    opacity: 0.3;
+} 
+
+.viewBiker4:hover h2 { 
+	transform: translateY(0px); 
+	transition-delay: 0.5s; 
+}
+.viewBiker4:hover p	{ 
+    transform: translateX(0px) rotate(0deg);
+	transition-delay: 0.4s;
+}
+.viewBiker4:hover a.info { 
+	transform: translateY(0px);
+	transition-delay: 0.3s;
+}
+
+
+/* Make the font size 12 pixels for any 
+devices less than 550 pixels wide */
+@media screen and (max-width:550px) {
+	body{ font-size: 12px; }
+}
+
+
+/* Make the font size 26 pixels for any 
+devices greater than 1550 pixels wide */
+@media screen and (min-width:1550px) {
+	body{ font-size: 26px; }
+}
+
+
