@@ -155,12 +155,12 @@ jQuery(document).ready(function($){
             document.getElementById("viewGallery").textContent = "Thrills and spills";
             
             // Set the thumbnail images
-            $('#image1').attr('src','/img/thrills/thrills1.jpg');
-            $('#image2').attr('src','/img/thrills/thrills2.jpg');
-            $('#image3').attr('src','/img/thrills/thrills3.jpg');
-            $('#image4').attr('src','/img/thrills/thrills4.jpg');
-            $('#image5').attr('src','/img/thrills/thrills5.jpg');
-            $('#image6').attr('src','/img/thrills/thrills6.jpg');
+            $('#image1').attr('src','./img/thrills/thrills1.jpg');
+            $('#image2').attr('src','./img/thrills/thrills2.jpg');
+            $('#image3').attr('src','./img/thrills/thrills3.jpg');
+            $('#image4').attr('src','./img/thrills/thrills4.jpg');
+            $('#image5').attr('src','./img/thrills/thrills5.jpg');
+            $('#image6').attr('src','./img/thrills/thrills6.jpg');
             
             // Set the image counter so that it shows the first image
             imgCounter = 0;
@@ -178,12 +178,12 @@ jQuery(document).ready(function($){
             document.getElementById("viewGallery").textContent = "Kidepo National Park";
             
             // Set the thumbnail images
-            $('#image1').attr('src','/img/kidepo/kidepo1.jpg');
-            $('#image2').attr('src','/img/kidepo/kidepo2.jpg');
-            $('#image3').attr('src','/img/kidepo/kidepo3.jpg');
-            $('#image4').attr('src','/img/kidepo/kidepo4.jpg');
-            $('#image5').attr('src','/img/kidepo/kidepo5.jpg');
-            $('#image6').attr('src','/img/kidepo/kidepo6.jpg');
+            $('#image1').attr('src','./img/kidepo/kidepo1.jpg');
+            $('#image2').attr('src','./img/kidepo/kidepo2.jpg');
+            $('#image3').attr('src','./img/kidepo/kidepo3.jpg');
+            $('#image4').attr('src','./img/kidepo/kidepo4.jpg');
+            $('#image5').attr('src','./img/kidepo/kidepo5.jpg');
+            $('#image6').attr('src','./img/kidepo/kidepo6.jpg');
             
             // Set the image counter so that it shows the first image
             imgCounter = 0;
@@ -201,12 +201,12 @@ jQuery(document).ready(function($){
             document.getElementById("viewGallery").textContent = "Lake Albert";
             
             // Set the thumbnail images
-            $('#image1').attr('src','/img/lakealbert/lakealbert1.jpg');
-            $('#image2').attr('src','/img/lakealbert/lakealbert2.jpg');
-            $('#image3').attr('src','/img/lakealbert/lakealbert3.jpg');
-            $('#image4').attr('src','/img/lakealbert/lakealbert4.jpg');
-            $('#image5').attr('src','/img/lakealbert/lakealbert5.jpg');
-            $('#image6').attr('src','/img/lakealbert/lakealbert6.jpg');
+            $('#image1').attr('src','./img/lakealbert/lakealbert1.jpg');
+            $('#image2').attr('src','./img/lakealbert/lakealbert2.jpg');
+            $('#image3').attr('src','./img/lakealbert/lakealbert3.jpg');
+            $('#image4').attr('src','./img/lakealbert/lakealbert4.jpg');
+            $('#image5').attr('src','./img/lakealbert/lakealbert5.jpg');
+            $('#image6').attr('src','./img/lakealbert/lakealbert6.jpg');
             
             // Set the image counter so that it shows the first image
             imgCounter = 0;
@@ -224,12 +224,12 @@ jQuery(document).ready(function($){
             document.getElementById("viewGallery").textContent = "Western Kenya";
 
             // Set the thumbnail images
-            $('#image1').attr('src','/img/westkenya/westkenya1.jpg');
-            $('#image2').attr('src','/img/westkenya/westkenya2.jpg');
-            $('#image3').attr('src','/img/westkenya/westkenya3.jpg');
-            $('#image4').attr('src','/img/westkenya/westkenya4.jpg');
-            $('#image5').attr('src','/img/westkenya/westkenya5.jpg');
-            $('#image6').attr('src','/img/westkenya/westkenya6.jpg');
+            $('#image1').attr('src','./img/westkenya/westkenya1.jpg');
+            $('#image2').attr('src','./img/westkenya/westkenya2.jpg');
+            $('#image3').attr('src','./img/westkenya/westkenya3.jpg');
+            $('#image4').attr('src','./img/westkenya/westkenya4.jpg');
+            $('#image5').attr('src','./img/westkenya/westkenya5.jpg');
+            $('#image6').attr('src','./img/westkenya/westkenya6.jpg');
             
             // Set the image counter so that it shows the first image
             imgCounter = 0;
