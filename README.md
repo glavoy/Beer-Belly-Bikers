@@ -1,3 +1,3 @@
 # Beer-Belly-Bikers
 
-A fun website
+This is just a fun website!
